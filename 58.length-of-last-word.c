@@ -7,10 +7,21 @@
 // @lc code=start
 int lengthOfLastWord(char* s) {
   int len=strlen(s);
-  for(i=len-1;i>=0;i--)
+  int count=0;
+  for(int i=len-1;i>=0;i--)
   {
-    
-  }  
+    if(s[i]==' ')
+    continue;
+    else
+    {
+        while(i>=0 && s[i]!=' '){
+        count++;
+        i--;
+    }
+        break;
+    }
+  }
+  return count;  
 }
 // @lc code=end
 
