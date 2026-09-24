@@ -9,6 +9,7 @@ int smallestIndex(int* nums, int numsSize) {
     int r,n,i;
     for(i=0;i<numsSize;i++)
     {
+        r=0;
         n=nums[i];
         while(n!=0)
         {
