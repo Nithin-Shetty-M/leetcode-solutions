@@ -6,15 +6,22 @@
 
 // @lc code=start
 char* reverseWords(char* s) {
-  int k,i;
-  char temp[strlen(s)];
-  for(i=strlen(s)-1;i>=0;i++)
+  int k,i,j=0;
+  char temp[strlen(s)+1];
+  for(i=strlen(s)-1;i>=0;i--)
   {
-    k=0;
+    k=i;
     while(s[i]!=' ')
     {
-       k++; 
+       k--; 
        i--;
+    }
+    k++;
+    while(s[k]!=' ')
+    {
+        temp[j]=s[k];
+        j++;
+        k++;
     }
   }  
 }
