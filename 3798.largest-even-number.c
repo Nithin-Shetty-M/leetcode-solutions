@@ -13,7 +13,10 @@ char* largestEven(char* s) {
     if(s[n-1]=='2')
     return s;
     else{
-        s[n-1]='\0';
+        while(strlen(s)!=0 && s[strlen(s)-1]=='1')
+        {
+        s[strlen(s)-1]='\0';
+        }
         return s;
     }
    }
